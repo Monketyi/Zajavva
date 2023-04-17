@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Zajavva Trading</title>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+    <link rel="stylesheet" href="medium.css" media="screen and (min-width: 1024px) and (max-width: 1380px)">
+    <link id="desktop-styles" rel="stylesheet" href="style.css" media="screen and (min-width: 1381px)">
+</head>
+
+<body>
+
+    <div class="black-overlay">
+        <img class="logo5" src="images/logoZ.png" alt="Twoje logo">
+        <div class="loading-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <div class="mobile">
+        <h2 class="work">Work in <span class="work1">progress</span>...</h2>
+        <h2 class="site">Site <span class="work1">available</span> on <span class="work1">desktop</span></h2>
+    </div>
+
+    <section class="landing"> 
+
+        <div class="switch">
+            <span class="ang en">English</span>
+            <input type="checkbox" class="check" id="languageSwitch" onclick="toggleLanguage()">
+            <span class="polski pl">Polski</span>
+            <script>
+                function toggleLanguage() {
+                  // kod do przełączania języków
+                }
+            
+                // Sprawdzenie języka przeglądarki
+                const userLanguage = window.navigator.language;
+            
+                if (userLanguage === 'pl' || userLanguage === 'pl-PL') {
+                  const languageSwitch = document.getElementById('languageSwitch');
+                  languageSwitch.checked = true;
+                  toggleLanguage(); // Wywołaj funkcję przełączania języków, aby ustawić tekst na polski
+                }
+                </script>
+        </div>
+
+        <img src="images/logozajavva.png" alt="logo-zajavva" class="logozajavva">
+
+        <script>
+            function toggleLanguage() {
+            const isChecked = document.querySelector('.check').checked;
+            const polskiElements = document.querySelectorAll('.polski');
+            const angElements = document.querySelectorAll('.ang');
+
+            if (isChecked) {
+                polskiElements.forEach(element => {
+                    element.style.display = 'block';
+                });
+                angElements.forEach(element => {
+                    element.style.display = 'none';
+                });
+            } else {
+                polskiElements.forEach(element => {
+                    element.style.display = 'none';
+                });
+                angElements.forEach(element => {
+                    element.style.display = 'block';
+                });
+            }
+        }
+
+window.onload = function() {
+  toggleLanguage();
+}
+        </script>
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+
+        <header>
+            <nav class="navigation">
+                <a href="#" class="active"><span class="ang">Home</span><span class="polski">Start</span></a>
+
+                <a href="#aboutus" id="aboutus"><span class="ang">About us</span><span class="polski">O nas</span></a>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                 $(document).ready(function() {
+                  $("#aboutus").click(function() {
+                   $('html, body').animate({
+                    scrollTop: $(".section2").offset().top
+                   }, 500);
+                  });
+                 });
+                </script>
+
+                <a href="#team" id="team"><span class="ang">Team</span><span class="polski">Zespół</span></a>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                 $(document).ready(function() {
+                  $("#team").click(function() {
+                   $('html, body').animate({
+                    scrollTop: $(".section4").offset().top
+                   }, 500);
+                  });
+                 });
+                </script>
+
+                <a href="#contact" id="contact"><span class="ang">Contact</span><span class="polski">Kontakt</span></a>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                 $(document).ready(function() {
+                  $("#contact").click(function() {
+                   $('html, body').animate({
+                    scrollTop: $(".section6").offset().top
+                   }, 500);
+                  });
+                 });
+                </script>
+
+            </nav>
+    
+        </header>
+    </section>
+
+    <section class="section1">
+
+        <div>
+
+            <h2 class="logo">Zajavva Trading</h2>
+
+        </div>
+
+        <div>
+            <button id="explore" class="explore"><span class="ang">Explore</span><span class="polski">Odkryj</span></button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+         $(document).ready(function() {
+          $("#explore").click(function() {
+           $('html, body').animate({
+            scrollTop: $(".section2").offset().top
+           }, 500);
+          });
+         });
+        </script>
+    </section>
+    
+    <section>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container1">
+            <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                    {
+                    "symbols": [
+                        {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500"
+                        },
+                        {
+                            "proName": "FOREXCOM:NSXUSD",
+                            "title": "US 100"
+                        },
+                        {
+                            "proName": "FX_IDC:EURUSD",
+                            "title": "EUR/USD"
+                        },
+                        {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "Bitcoin"
+                        },
+                        {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "Ethereum"
+                        }
+                    ],
+                        "showSymbolLogo": true,
+                        "colorTheme": "dark",
+                        "isTransparent": true,
+                        "displayMode": "regular",
+                        "locale": "en"
+                    }
+                    </script>
+         </div>
+    </section>
+
+    <section class="section2">
+        <div>
+            
+            <div class="wrapper">
+                <div class="static-txt ang">We're</div>
+                <div class="static-txt polski">Jesteśmy</div>
+                <ul class="dynamic-txts ang">
+                    <li><span>Traders</span></li>
+                    <li><span>Community</span></li>
+                </ul>
+                <ul class="dynamic-txts polski">
+                    <li><span>Traderami</span></li>
+                    <li><span>Społecznością</span></li>
+                </ul>
+            </div>
+
+            
+
+            <div class="us">
+                <h2 class="join ang">Join us in this journey,</h2>
+                <h2 class="join polski">Dołącz do nas w tej przygodzie</h2>
+                <h2 class="learn ang">and see new opportunities</h2>
+                <h2 class="learn polski">i odkryj nowe możliwości</h2>
+                <h2 class="money"><span class="ZZ ang">with</span><span class="ZZZ ang">Zajavva</span><span class="Z ang">.</span></h2>
+                <h2 class="money"><span class="ZZ polski">z</span><span class="ZZZ polski">Zajavvą</span><span class="Z polski">.</span></h2>
+            </div>
+
+            <div class="us2">
+                <h1 class="description ang">Zajavva Trading is an education community, where you can learn with a group that is lead by mentors on how to use forex / stock / crypto markets to make your future better. Our mission is to provide unwavering support to empower, and nurture your educational growth. We are committed to offering personalized assistance tailored to your unique needs, ensuring that you can thrive in your learning endeavors.</h1>
+                <h1 class="description polski">Zajavva Trading to społeczność edukacyjna, gdzie możesz uczyć się w grupie pod okiem mentorów, jak używać forex / stock / crypto marketów, żeby zabezpieczyć twoją przyszłość. Naszą misją jest to, aby zapewnić niezachwiane wsparcie żeby wzmocnić i pielęgnować twój rozwój edukacyjny. Zobowiązujemy się zaoferować ci spersonalizowaną pomoc dostosowaną do twoich unikalnych potrzeb oraz upewnić się, że rozwijasz się w swoim tempie.</h1>
+            </div>
+
+            <div class="buttons">
+                <a href="https://discord.gg/VQKUt32T8Z" class="discord ang" target="_blank">Join Discord</a>
+                <a href="https://discord.gg/VQKUt32T8Z" class="discord polski" target="_blank">Discord</a>
+                <button onclick="scrollPage(200)" id="start" class="start"><span class="ang">Start Learning</span><span class="polski">Rozpocznij</span></button>
+                <script>
+                    $(document).ready(function() {
+                     $("#start").click(function() {
+                      $('html, body').animate({
+                       scrollTop: $(".section6").offset().top
+                      }, 500);
+                     });
+                    });
+                </script>
+            </div>
+            
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_019f2"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener" target="_blank"></a></div>
+                    
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        
+                        <script type="text/javascript">
+                        new TradingView.widget(
+                        {
+                            "symbol": "FX:EURUSD",
+                            "interval": "15",
+                            "timezone": "Europe/Warsaw",
+                            "theme": "dark",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "allow_symbol_change": true,
+                            "save_image": false,
+                            "container_id": "tradingview_019f2"
+                        }
+                        );
+                        </script>
+                     </div>
+            
+        </div>
+    </section>
+
+    <section class="section3">
+
+        <img src="images/logoZ.png" class="logoz1">
+
+        <div class="zajavvanapis">
+            <h2 class="znapis">Zajavva</h2>
+            <h2 class="tnapis">Trading</h2>
+            <h1 class="zopis ang">Discover the advantages of choosing us as your education community! We stand out from the competition by offering an exceptional experience tailored to your needs. To help you understand why we are the perfect choice for your trading journey, here are three key things to consider.</h1>
+            <h1 class="zopis polski">Odkryj zalety wyboru nas jako twojej społeczności edukacyjnej! Wyróżniamy się na tle konkurencji oferując wyjątkowe doznania dopasowane do twoich potrzeb. Aby pomóc Ci zrozumieć, dlaczego jesteśmy idealnym wyborem dla twojej przygody z tradingiem, tu są trzy kluczowe kwestie do rozważenia. </h1>
+        </div>
+
+        <div class="blur"></div>
+
+        <div class="cards">
+            <div class="card1">
+                <img src="images/people.svg">
+                <h2 class="tcard ang">Community first</h2>
+                <h2 class="tcard polski">Społeczność</h2>
+                <h1 class="dcard ang">Rapidly growing community of people hungry for knowledge. Who work together in a group chasing their goals under the guidance of mentors.</h1>
+                <h1 class="dcard polski">Szybko rozwijająca się społeczność ludzi spragnionych wiedzy, którzy pracują razem w grupie realizując swoje cele pod okiem mentorów.</h1>
+            </div>
+
+            <div class="card2">
+                <img src="images/note.svg">
+                <h2 class="tcard ang">Lifelong Learning</h2>
+                <h2 class="tcard polski">Kształcenie ustawiczne</h2>
+                <h1 class="dcard ang">Instant access to up-to date trading knowledge, growing community and lots of lessons with our mentors.</h1>
+                <h1 class="dcard polski">Natychmiastowy dostęp do aktualnej wiedzy na temat tradingu, rosnącej społeczności i wielu lekcji z naszymi mentorami.</h1>
+            </div>
+
+            <div class="card3">
+                <img src="images/settings.svg">
+                <h2 class="tcard ang">Curated Content</h2>
+                <h2 class="tcard polski">Wyselekcjonowana zawartość</h2>
+                <h1 class="dcard ang">Explore our ever-expanding range of classes, including exclusive skill-building courses and knowledge crafted by industry experts just for you. As we constantly add new offerings, you'll always stay ahead in your learning journey.</h1>
+                <h1 class="dcard polski">Zapoznaj się z naszą stale poszerzającą się ofertą zajęć, w tym ekskluzywnymi kursami rozwijania umiejętności i wiedzą stworzoną specjalnie dla Ciebie przez ekspertów branżowych. Stale dodajemy nową wiedze, zawsze będziesz wyprzedzać innych w swojej przygodzie tradingowej.</h1>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="section4">
+            <div class="meet1">
+                <h2 class="meet ang">Meet our <span class="greentxt">Zajavva </span>members</h2>
+                <h2 class="meet polski">Poznaj naszych członków <span class="greentxt">Zajavvy</span></h2>
+            </div>
+            <img src="images/members2.png" class="members">
+    </section>
+
+    <section class="section7">
+            <div class="desc">
+                <div class="desc1">
+                    <h2 class="tdesc ang">Expertise</h2>
+                    <h2 class="tdesc polski">Ekspertyza</h2>
+                    <h1 class="ddesc ang">Our team of seasoned professionals possesses deep knowledge and extensive experience in trading, ensuring top-notch guidance and support for our community members as they navigate the complexities of the market.</h1>
+                    <h1 class="ddesc polski">Nasz zespół doświadczonych profesjonalistów posiada głęboką wiedzę oraz bogate doświadczenie w tradingu, zapewniając najwyższej klasy wskazówki,  a także wsparcie dla członków naszej społeczności, gdy poruszają się po złożoności rynku.</h1>
+                </div>
+    
+                <div class="desc2">
+                    <h2 class="tdesc ang">Collaborative Environment</h2>
+                    <h2 class="tdesc polski">Środowisko współpracy</h2>
+                    <h1 class="ddesc ang">Our trading community thrives on mutual support and knowledge-sharing, fostering a strong network of individuals who learn from each other and grow together. This collaborative approach accelerates growth and success for all members.</h1>
+                    <h1 class="ddesc polski">Naszą społeczność handlową opieramy na wzajemnym wsparciu i dzieleniu się wiedzą, tworząc silną sieć osób, które uczą się od siebie nawzajem i razem się rozwijają. Takie oparte, na współpracy podejście, przyspiesza rozwój i sukces wszystkich członków.</h1>
+                </div>
+    
+                <div class="desc3">
+                    <h2 class="tdesc ang">Meet us</h2>
+                    <h2 class="tdesc polski">Poznaj nas</h2>
+                    <h1 class="ddesc ang">Discover the people behind our success! Watch our captivating video to get an insider's look at our team, our passion, and our commitment to excellence. Don't miss the chance to truly know us. Hit <a href="#" class="ddesc1">Play now!</a></h1>
+                    <h1 class="ddesc polski">Poznaj ludzi, którzy stoją za naszym sukcesem! Obejrzyj nasz film, aby poznać nasz zespół, naszą pasję oraz dążenie do doskonałości od wewnątrz. Nie przegap szansy, aby naprawdę nas poznać. Wciśnij napis <a href="#" class="ddesc1">Oglądnij teraz!</a> aby przejść do filmu.</h1>
+                </div>
+            </div>
+    </section>
+
+    </section>
+
+    <section class="section5">
+        <div class="community1">
+            <h2 class="community ang">Our <span class="greentxt">platform</span> and <span class="greentxt">community</span></h2>
+            <h2 class="community polski">Nasza <span class="greentxt">platforma</span> i <span class="greentxt">społeczność</span></h2>
+            <h1 class="communitydesc ang">Our expansive learning platform offers a wealth of resources to aid your educational journey. With a tight-knit community of passionate learners, collaboration is key to unlocking growth and success. Embrace the power of learning together and unlock your full potential.</h1>
+            <h1 class="communitydesc polski">Nasza rozbudowana platforma oferuje bogactwo zasobów, które pomogą Ci w przygodzie edukacyjnej. Dzięki zgranej społeczności, pełnych pasji członków, współpraca jest kluczem do odblokowania rozwoju i sukcesu. Wykorzystaj moc wspólnej nauki i uwolnij swój pełny potencjał.</h1>
+        </div>
+        
+        <div class="platform">
+
+            <img src="images/discord.png" class="discrodpic">
+
+            <div class="cards1">
+                <div class="card4">
+                    <img class="image" src="images/man.svg">
+                    <h2 class="tcard1 ang">Collaboration</h2>
+                    <h2 class="tcard1 polski">Współpraca</h2>
+                    <h1 class="dcard1 ang">Harness the power of collective learning, where cooperation and support pave the way for individual development and accomplishment.</h1>
+                    <h1 class="dcard1 polski">Wykorzystaj moc zbiorowego uczenia się, gdzie współpraca i wsparcie torują drogę indywidualnemu rozwojowi oraz osiągnięciom.</h1>
+                </div>
+
+                <div class="card5">
+                    <img class="image" src="images/div.svg">
+                    <h2 class="tcard1 ang">Our Expansive Platform</h2>
+                    <h2 class="tcard1 polski">Nasza platforma</h2>
+                    <h1 class="dcard1 ang">Discover our extensive library of resources, designed to cater to diverse learning needs and propel you towards academic success.</h1>
+                    <h1 class="dcard1 polski">Odkryj naszą obszerną bibliotekę zasobów, zaprojektowaną tak, aby zaspokoić różnorodne potrzeby edukacyjne i pomóc Ci osiągnąć sukces.</h1>
+                </div>
+
+                <div class="card6">
+                    <img class="image" src="images/chart.svg">
+                    <h2 class="tcard1 ang">Expert Guidance</h2>
+                    <h2 class="tcard1 polski">Wskazówki ekspertów</h2>
+                    <h1 class="dcard1 ang">Benefit from our experienced mentors, who provide personalized support and invaluable insights, elevating your learning journey and driving you towards success.</h1>
+                    <h1 class="dcard1 polski">Skorzystaj z wiedzy naszych doświadczonych mentorów, którzy zapewniają spersonalizowane wsparcie i bezcenne spostrzeżenia, podnosząc poziom Twojej nauki i prowadząc Cię do sukcesu.</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section6">
+
+        
+
+        <div class="contact1">
+            <h2 class="contact ang">How to get in <span class="touch">touch</span>?</h2>
+            <h2 class="contact polski">Jak się <span class="touch">skontaktować</span>?</h2>
+            <div class="c1">
+                <h2 class="tc2 ang">Contact form</h2>
+                <h2 class="tc2 polski">Formularz kontaktowy</h2>
+                <h1 class="dc2 ang">Get in touch with us easily and conveniently through our online contact form. Simply fill out the required fields, and a member of our team will get back to you as soon as possible. This is the perfect way to start learning with us!</h1>
+                <button class="button-contact ang" onclick="window.location.href='http://www.innastrona.com'">Join us</button>
+                <h1 class="dc2 polski">Skontaktuj się z nami łatwo i wygodnie za pomocą formularza kontaktowego online. Po prostu wypełnij wymagane pola, a członek naszego zespołu skontaktuje się z Tobą tak szybko, jak to możliwe. To idealny sposób na rozpoczęcie nauki z nami!</h1>
+                <button class="button-contact polski" onclick="window.location.href='http://www.innastrona.com'">Dołącz do nas</button>
+            </div>
+        </div>
+
+        <div class="contact2">
+            <div class="c2">
+                <h2 class="tc1 ang">Facebook</h2>
+                <h2 class="tc1 polski">Facebook</h2>
+                <h1 class="dc1 ang">Stay connected with us on social media! Visit our Facebook page to get the latest updates, news, and promotions. You can also send us a message directly through Facebook Messenger for a quick and convenient way to get in touch with our team. We're always here to help and eager to chat!</h1>
+                <h1 class="dc1 polski">Skontaktuj się z nami w mediach społecznościowych! Odwiedź naszą stronę na Facebooku, aby otrzymywać najnowsze aktualizacje, nowości i promocje. Możesz również wysłać do nas wiadomość bezpośrednio przez Facebook Messenger, aby szybko i wygodnie skontaktować się z naszym zespołem. Zawsze służymy pomocą i jesteśmy chętni do rozmowy!</h1>
+                <a href="https://www.facebook.com/zajavva" target="_blank">
+                    <img src="images/facebook1.png" class="Facebook1">
+                </a>
+            </div>
+
+            <div class="c3">
+                <h2 class="tc1 ang">WhatsApp</h2>
+                <h2 class="tc1 polski">WhatsApp</h2>
+                <h1 class="dc1 ang">Prefer messaging through WhatsApp? No problem! Contact us on WhatsApp for a fast and efficient way to communicate with our team. Whether you have questions, need assistance, or simply want to share your thoughts, we're just a text away. Click on WhatsApp icon and drop us a message anytime!</h1>
+                <h1 class="dc1 polski">Wolisz napisać do nas przez WhatsApp? Bez problemu! Skontaktuj się z nami na WhatsApp, aby szybko oraz skutecznie komunikować się z naszym zespołem. Niezależnie od tego, czy masz pytania, potrzebujesz pomocy, czy po prostu chcesz podzielić się swoimi przemyśleniami. Kliknij ikonę WhatsApp i wyślij nam wiadomość!</h1>
+                <a href="https://www.facebook.com/zajavva" target="_blank">
+                    <img src="images/whatsapp.png" class="Facebook1">
+                </a>
+            </div>
+        </div>
+
+
+        
+    </section>
+
+    <section class="footer-section">
+        <div class="ft">
+            <div class="container-footer">
+                <img class="logo-footer" src="images/logo64.png">
+                <h2 class="logo-text-footer">Zajavva Trading</h2>
+                <h1 class="logo-desc-footer ang">Get a guided and personalized experience with access to theoretical knowledge, courses, mentoring program as well. We are community!</h1>
+                <h1 class="logo-desc-footer polski">Skorzystaj z kierowanego i spersonalizowanego doświadczenia z dostępem do wiedzy teoretycznej, kursów, a także programu mentoringu. Jesteśmy społecznością!</h1>
+
+                <div class="socials">
+                  <a href="https://www.instagram.com/zajavva_trading/" target="_blank">
+                        <img src="images/instagram.png" class="Instagram">
+                   </a>
+
+                  <a href="https://www.facebook.com/zajavva" target="_blank">
+                        <img src="images/facebook.png" class="Facebook">
+                   </a>
+
+                    <a href="https://twitter.com/zajavva" target="_blank">
+                        <img src="images/twitter.png" class="Twitter">
+                    </a>
+
+                    <a href="https://www.youtube.com/@Gurinio14" target="_blank">
+                        <img src="images/youtube.png" class="YouTube">
+                    </a>
+
+                    <a href="https://www.tiktok.com/@zajavvatrading" target="_blank">
+                        <img src="images/tik-tok.png" class="TikTok">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="newsletter">
+                <h2 class="ang">Subscribe to our newsletter</h2>
+                <h2 class="polski">Zasubskrybuj nasz newsletter</h2>
+                <form>
+                  <input class="email1" type="email" id="email" name="email" placeholder="Your email" required>
+                  <button class="ang" type="submit">Subscribe</button>
+                  <button class="polski" type="submit">Subskrybuj</button>
+                </form>
+              </div>
+        
+              <!-- JavaScript -->
+              <script>
+              const emailInput = document.querySelector('#email');
+              const emailLabel = document.querySelector('label[for="email"]');
+              
+              emailInput.addEventListener('input', () => {
+                if (emailInput.value !== '') {
+                  emailLabel.style.display = 'none';
+                } else {
+                  emailLabel.style.display = 'inline-block';
+                }
+              });
+              </script>
+             </div>
+        </div>
+
+    </section>
+
+    <footer class="footer-napisy">
+        <h1 class="monke">Design by <span><a class="bluemonke" href="https://www.instagram.com/monketyi/" rel="noopener" target="_blank"></span>Monke Tyi</span></a></h1>
+        <p class="footer-desc">&copy; 2023 Poland. Zajavva Trading. All rights reserved.</p> 
+        <div class="tradingview-widget-copyright"><a class="blue-text1" href="https://www.tradingview.com/widget/technical-analysis/" rel="noopener" target="_blank"><span class="blue-text1">Market widget</span></a> by TradingView</div>
+        
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+
